@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-rc@04_mry_3-$@2sq$b9%-9jp6q2eyxf4bsw9&&esj++aw&r)p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'https://ajerni-urban-goldfish-w9x5vxjvqg25q9.github.dev/']
+ALLOWED_HOSTS = ['localhost', 'https://ajerni-urban-goldfish-w9x5vxjvqg25q9.github.dev/',
+                  '.vercel.app']
 
 if 'CODESPACE_NAME' in os.environ:
     codespace_name = os.getenv("CODESPACE_NAME")
@@ -57,12 +58,12 @@ MIDDLEWARE = [
 
 X_FRAME_OPTIONS = "ALLOW-FROM preview.app.github.dev"
 
-ROOT_URLCONF = "hello_world.urls"
+ROOT_URLCONF = "andierni.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "hello_world" / "templates"],
+        "DIRS": [BASE_DIR / "andierni" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -75,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "hello_world.wsgi.application"
+WSGI_APPLICATION = "andierni.wsgi.application"
 
 
 # Database
@@ -123,11 +124,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATICFILES_DIRS = [
-    BASE_DIR / "hello_world" / "static",
-]
+#STATICFILES_DIRS = [BASE_DIR / "andierni" / "static"]
 
-STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'andierni/static') ]
+
+STATIC_URL = "staticfiles/static/"
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
