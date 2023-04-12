@@ -76,8 +76,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "andierni.wsgi.application"
-#WSGI_APPLICATION = "andierni.wsgi.app"
+#WSGI_APPLICATION = "andierni.wsgi.application"
+WSGI_APPLICATION = "andierni.wsgi.app"
 
 
 # Database
