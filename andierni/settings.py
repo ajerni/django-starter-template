@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-rc@04_mry_3-$@2sq$b9%-9jp6q2eyxf4bsw9&&esj++aw&r)p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['aerni.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'https://ajerni-urban-goldfish-w9x5vxjvqg25q9.github.dev/','aerni.pythonanywhere.com']
 
 if 'CODESPACE_NAME' in os.environ:
     codespace_name = os.getenv("CODESPACE_NAME")
