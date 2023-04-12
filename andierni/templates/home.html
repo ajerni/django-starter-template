@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div>
+    <br />
+    <h1>H O M E</h1>
+    <img src="{% static 'images/Octocat.png' %}" alt="logo" />
+    <br />
+    <a href="{% url 'test' %}">Test it now</a>
+</div>
+
+{% endblock %}

@@ -20,9 +20,8 @@ from . import views
 from andierni.core import views as core_views
 
 urlpatterns = [
-    path("", core_views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    path('', views.home, name='home'),
     path('test', views.test, name='test'),
-    path('home', core_views.index, name='home')
 ]
