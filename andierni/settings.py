@@ -126,7 +126,7 @@ USE_TZ = True
 
 #STATICFILES_DIRS = [BASE_DIR / "andierni" / "static"]
 
-STATIC_URL = "staticfiles/static/"
+STATIC_URL = "/staticfiles/static/"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'andierni/static') ]
 
