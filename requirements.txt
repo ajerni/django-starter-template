@@ -1,3 +1,4 @@
 Django==4.1.7
+django-browser-reload==1.6.0
 requests==2.28.2
 openai==0.27.4
