@@ -27,5 +27,7 @@
         "dest": "staticfiles/wsgi.py"
       }
     ],
-    "outputDirectory": "staticfiles"
+    "outputDirectory": "staticfiles",
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    
   }
